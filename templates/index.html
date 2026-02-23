@@ -204,7 +204,7 @@ let loadedFiles = [];
 let mergedBlob = null;
 const opts = { opt_clientes:true, opt_ventas:true, opt_productos:true, opt_categorias:true, opt_compras:true, opt_imagenes:true };
 
-initSqlJs({ locateFile: f => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/${f}` })
+initSqlJs({ locateFile: f => f })
   .then(s => { SQL = s; })
   .catch(e => alert('Error cargando sql.js: ' + e.message));
 
